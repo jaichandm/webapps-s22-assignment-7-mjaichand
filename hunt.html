@@ -12,47 +12,61 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Bird hunt by Jaichand Mulakalapalli</h1>
-    <div class="container-fluid" style="background-color:lavender; font-style: italic;">Click on the squares to search for a bird</div>
-    <div id="shakes" class="container-fluid" style="background-color:lavenderblush;">Number of shakes is zero.</div>
-    <div id="score" class="container-fluid" style="background-color:lavenderblush;">Location score is unknown.</div>
-    <div class="container">
-        <p style="font-size: large;"><b>5 by 5 game field (display of images)</b></p>
-        <div class="row">
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavenderblush;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-            <div class="col-sm-auto" style="background-color:lavender;"><img class="img-thumbnail" src="bush.jpg" height="200" width="200"></div>
-        </div>
-      </div>
+  <h1>Bird hunt by Jaichand Mulakalapalli</h1>
+  <div class="container-fluid" style="background-color:lavender; font-style: italic;">Click on the squares to search for a bird</div>
+  <div id="shakes" class="container-fluid" style="background-color:lavenderblush;">Number of shakes is zero.</div>
+  <div id="score" class="container-fluid" style="background-color:lavenderblush;">Location score is unknown.</div>
+  <div class="container">
+    <p style="font-size: large;"><b>5 by 5 game field (display of images)</b></p>
+    <div class="row">
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image0" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(0)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image1" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(1)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image2" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(2)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image3" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(3)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image4" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(4)"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image5" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(5)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image6" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(6)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image7" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(7)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image8" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(8)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image9" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(9)"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image10" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(10)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image11" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(11)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image12" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(12)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image13" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(13)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image14" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(14)"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image15" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(15)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image16" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(16)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image17" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(17)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image18" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(18)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image19" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(19)"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image20" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(20)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image21" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(21)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image22" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(22)"></div>
+      <div class="col-sm-auto" style="background-color:lavenderblush;"><img id="image23" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(23)"></div>
+      <div class="col-sm-auto" style="background-color:lavender;"><img id="image24" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(24)"></div>
+    </div>
+  </div>
+  <script>
+    var ids =[image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25]
+    var shakeCount = 0
+    var birdlLocation = 18
+    function check(position) {
+      getId = ids[position];
+      getImgE = document.getElementById(""+getId+"")
+      if (position == birdlLocation) {
+        
+      } else {
+        
+      }
+    }
+  </script>
 </body>
 </html>
