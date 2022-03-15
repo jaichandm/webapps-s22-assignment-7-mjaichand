@@ -16,7 +16,7 @@
   <div id="countdown">Count</div>
   <button type="button"
   class="btn btn-primary"
-  onclick="buttonPress21()">Start Timer</button>
+  onclick="startTime()">Start Timer</button>
   
   <button type="button"
   class="btn btn-primary"
@@ -24,20 +24,26 @@
   
   <script>
   var myTime= undefined
-  function buttonPress1() {
-    setTimeout(function(){
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
-
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
   function recordReact() {
     myTime=Date.now()
     console.log("React time in milliseconds is "+myTime);
+  }
+
+  function startTime() {
+    for (let i = 0; i < 4; i++) {
+      setTimeout(function(){
+        document.getElementById('countdown').innerHTML=i
+      }, (3-i)*1000)
+    }
+
+    setTimeout(() => {
+      if (myTime==undefined) {
+        document.getElementById('target').innerHTML="Too Slow"
+      } else {
+        let buttonTime=Date.now()
+        document.getElementById('target').innerHTML="Time was "+ (buttonTime-myTime)
+      }
+    }, 3000);
   }
   </script>
 </body>
