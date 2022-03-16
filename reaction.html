@@ -29,11 +29,16 @@
     console.log("React time in milliseconds is "+myTime);
   }
 
+  function generateRandomIntegerInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   function startTime() {
-    for (let i = 0; i < 4; i++) {
+    var cnt =generateRandomIntegerInRange(2,10);
+    for (let i = 0; i < cnt; i++) {
       setTimeout(function(){
         document.getElementById('countdown').innerHTML=i
-      }, (3-i)*1000)
+      }, (cnt-i)*1000)
     }
 
     setTimeout(() => {
@@ -43,7 +48,7 @@
         let buttonTime=Date.now()
         document.getElementById('target').innerHTML="Time was "+ (buttonTime-myTime)
       }
-    }, 3000);
+    }, cnt*1000);
   }
   </script>
 </body>

@@ -42,7 +42,8 @@
 		<input type="text" id="input_text" name="input_text">
 		<input class="btn btn-outline-success" type="button" onclick="makeNewDiv()" value="Add value"><br>
 		<input class="btn btn-outline-success" type="button" onclick="fetchItem()" value="Fetch"><br>
-		<input class="btn btn-outline-success" type="button" onclick="zap()" value="Zap values">
+		<input class="btn btn-outline-success" type="button" onclick="zap()" value="Zap values"><br>
+		<input class="btn btn-outline-success" type="button" onclick="removeDups()" value="Unique">
 	</form>
 
 </body>
@@ -79,6 +80,18 @@
                 console.log("We are getting rid of all the elements with that text.");
             }
         }
+	}
+	function removeDups() {
+		queueItems = document.getElementsByClassName("queue")
+		for (let i = 0; i < queueItems.length; i++) {
+			for (let j = 0; j < queueItems.length; j++) {
+				cnt=0
+				if(queueItems[i].innerHTML == queueItems[j].innerHTML && i!=j){
+					queueItems[j].remove();
+				}
+			}	
+		}
+		console.log("removing the duplicates");
 	}
 </script>
 

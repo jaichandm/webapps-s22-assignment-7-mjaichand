@@ -54,6 +54,8 @@
       <div class="col-sm-auto" style="background-color:lavender;"><img id="image24" class="img-thumbnail" src="bush.jpg" height="200" width="200" onclick="check(24)"></div>
     </div>
   </div>
+  <br>
+  <button class="btn btn-success" style="display: block; margin-left: auto;margin-right: auto;" id="random" onclick="randomMethod()">Randomize Bird Location</button>
   <script>
     var ids =["image0","image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10", "image11", "image12", "image13", "image14", "image15", "image16", "image17", "image18", "image19", "image20", "image21", "image22", "image23", "image24"]
     var shakeCount = 0
@@ -96,6 +98,13 @@
         score =0;
       }
       return score;
+    }
+    function generateRandomIntegerInRange(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function randomMethod() {
+      shakeCount = 0;
+      birdlLocation = generateRandomIntegerInRange(0,24);
     }
   </script>
 </body>
