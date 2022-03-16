@@ -30,31 +30,55 @@
 
 <body>
 	<h2>Jaichand Mulakalapalli builds a reversed queue</h2>
-	
-	<input type="text" id="input_text" name="input_text">
-
-	<button onclick="makeNewDiv()">Add Value</button>
-	<br>
 	<div class="flex-container" id="target">
 		<div class="queue">row item 1</div>
 		<div class="queue">row item 2</div>
 		<div class="queue">row item 3</div>
 	</div>
 	<p>
-		Press the button to create an new element of type div and then add it to the container.
+		Enter element value and press the button to create an new element of type div and then add it to the container.
 	</p>
+	<form class="form-group">
+		<input type="text" id="input_text" name="input_text">
+		<input class="btn btn-outline-success" type="button" onclick="makeNewDiv()" value="Add value"><br>
+		<input class="btn btn-outline-success" type="button" onclick="fetchItem()" value="Fetch"><br>
+		<input class="btn btn-outline-success" type="button" onclick="zap()" value="Zap values">
+	</form>
+
 </body>
 <script>
 	function makeNewDiv() {
 		/* make the div and its text */
 		let element = document.createElement("div")
 		element.innerHTML = document.getElementById("input_text").value;
+		element.setAttribute('class', 'queue');
 		element.style.color = "orange"
 
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.insertBefore(element, container.firstChild)
 
+	}
+
+	function fetchItem() {
+		queueItems = document.getElementsByClassName("queue");
+		var qlength = queueItems.length;
+		if (qlength > 0) {
+			queueItems[qlength - 1].remove();
+		}
+	}
+
+	function zap() {
+		queueItems = document.getElementsByClassName("queue")
+		valueZap = document.getElementById("input_text").value;
+		var qlength = queueItems.length;
+		for (let i = 0; i < qlength; i++) {
+			valueQueue=queueItems[i].innerHTML;
+            if (valueZap == valueQueue) {
+                queueItems[i].remove();
+                console.log("We are getting rid of all the elements with that text.");
+            }
+        }
 	}
 </script>
 
